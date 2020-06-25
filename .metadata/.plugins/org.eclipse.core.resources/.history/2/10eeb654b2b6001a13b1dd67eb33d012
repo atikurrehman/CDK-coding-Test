@@ -23,7 +23,7 @@ public class CustomerService {
 
 		BillGenrator billGenrator = billGenratorFactoy.getBillGenrator(customer.getCustomerType());
 
-		return billGenrator.genrateBill(billAmount);
+		return billGenrator.genrateBill(billAmount,repo);
 	}
 
 }

@@ -10,7 +10,7 @@ public class BillGenratorFactoy {
 	@Autowired
 	private PremimumCustomerBillCalculater prRepo;
 
-	public BillGenrator getBillGenrator(CustomerType customerType) {
+	public static BillGenrator getBillGenrator(CustomerType customerType) {
 		BillGenrator billGenrator = null;
 
 		switch (customerType) {

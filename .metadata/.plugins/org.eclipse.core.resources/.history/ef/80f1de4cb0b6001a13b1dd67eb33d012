@@ -1,0 +1,18 @@
+package com.cdk.test.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.cdk.test.repository.DiscountslabesRepository;
+
+import lombok.RequiredArgsConstructor;
+
+@Component
+public interface BillGenrator {
+	
+	public static final DiscountslabesRepository repo = null;
+	
+	
+	public double genrateBill(double billAmount,DiscountslabesRepository repo);
+
+}

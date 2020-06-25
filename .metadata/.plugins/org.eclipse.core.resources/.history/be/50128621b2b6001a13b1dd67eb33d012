@@ -12,8 +12,7 @@ public class CustomerService {
 
 	@Autowired
 	CustomerRepository customerRepository;
-	@Autowired
-	BillGenratorFactoy billGenratorFactoy;
+	
 	@Autowired
 	DiscountslabesRepository repo;
 
@@ -21,9 +20,9 @@ public class CustomerService {
 
 		Customer customer = customerRepository.findById(customerId).get();
 
-		BillGenrator billGenrator = billGenratorFactoy.getBillGenrator(customer.getCustomerType());
+		BillGenrator billGenrator = BillGenratorFactoy.getBillGenrator(customer.getCustomerType());
 
-		return billGenrator.genrateBill(billAmount);
+		return billGenrator.genrateBill(billAmount,repo);
 	}
 
 }

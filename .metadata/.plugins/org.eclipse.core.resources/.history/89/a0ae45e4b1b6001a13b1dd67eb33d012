@@ -10,15 +10,16 @@ public class BillGenratorFactoy {
 	@Autowired
 	private PremimumCustomerBillCalculater prRepo;
 
-	public BillGenrator getBillGenrator(CustomerType customerType) {
+	public static BillGenrator getBillGenrator(CustomerType customerType) {
 		BillGenrator billGenrator = null;
+		BillGenratorFactoy fact = new BillGenratorFactoy();
 
 		switch (customerType) {
 		case REGULAR:
-			billGenrator = reRepo;
+			billGenrator = fact.reRepo;
 			break;
 		case PREMIMUM:
-			billGenrator = prRepo;
+			billGenrator = fact.prRepo;
 			break;
 		default:
 			break;

@@ -5,14 +5,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BillGenratorFactoy {
-	@Autowired
-	private RegularCustomerBillCalculater reRepo;
-	@Autowired
-	private PremimumCustomerBillCalculater prRepo;
+	@Autowired static RegularCustomerBillCalculater reRepo;
+	@Autowired static  PremimumCustomerBillCalculater prRepo;
 
-	public BillGenrator getBillGenrator(CustomerType customerType) {
+	public static BillGenrator getBillGenrator(CustomerType customerType) {
 		BillGenrator billGenrator = null;
-
 		switch (customerType) {
 		case REGULAR:
 			billGenrator = reRepo;
