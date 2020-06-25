@@ -1,0 +1,2 @@
+INSERT INTO customer VALUES(1,"test_primimum","PREMIMUM");
+INSERT INTO customer VALUES(2,"test_regular","REGULAR");

@@ -1,0 +1,11 @@
+package com.cdk.test.service;
+
+public class RegularCustomerBillCalculater implements BillGenrator {
+
+	@Override
+	public double genrateBill(double billAmount) {
+		/
+		return 0;
+	}
+
+}

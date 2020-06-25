@@ -1,0 +1,16 @@
+package com.cdk.test.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class RegularCustomerBillCalculater implements BillGenrator {
+
+	@Override
+	public double genrateBill(double billAmount) {
+		
+		
+		
+		return 0;
+	}
+
+}

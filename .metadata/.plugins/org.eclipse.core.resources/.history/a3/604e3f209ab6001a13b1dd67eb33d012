@@ -1,0 +1,5 @@
+package com.cdk.test.service;
+
+public interface BillGenrator {
+
+}

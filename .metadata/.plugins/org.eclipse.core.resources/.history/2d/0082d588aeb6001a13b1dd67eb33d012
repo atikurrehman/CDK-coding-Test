@@ -1,0 +1,55 @@
+package com.cdk.test.controller;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.web.server.LocalServerPort;
+
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+class CustomerControllerTest {
+	@LocalServerPort
+	private int port;
+
+	@Autowired
+	private TestRestTemplate restTemplate;
+
+	@Test
+	void testGenrateCustomerBillRegular5000() {
+		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/customers/bill/1/5000",
+				Double.class)).isEqualTo(5000);
+	}
+	
+	@Test
+	void testGenrateCustomerBillRegular10000() {
+		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/customers/bill/1/10000",
+				Double.class)).isEqualTo(9500);
+	}
+	@Test
+	void testGenrateCustomerBillRegular15000() {
+		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/customers/bill/1/15000",
+				Double.class)).isEqualTo(13500);
+	}
+	
+	@Test
+	void testGenrateCustomerBillPrimimum4000() {
+		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/customers/bill/2/4000",
+				Double.class)).isEqualTo(5000);
+	}@Test
+	void testGenrateCustomerBillPrimimum8000() {
+		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/customers/bill/2/10000",
+				Double.class)).isEqualTo(5000);
+	}@Test
+	void testGenrateCustomerBillPrimimum12000() {
+		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/customers/bill/2/12000",
+				Double.class)).isEqualTo(5000);
+	}@Test
+	void testGenrateCustomerBillPrimimum20000() {
+		assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/customers/bill/2/20000",
+				Double.class)).isEqualTo(5000);
+	}
+
+}

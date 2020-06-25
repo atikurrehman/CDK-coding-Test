@@ -1,0 +1,11 @@
+package com.cdk.test.service;
+
+public class BillGenratorFactoy {
+	
+	
+	public Static BillGenrator getBillGenrator(String customerType) {
+		
+		
+	}
+
+}

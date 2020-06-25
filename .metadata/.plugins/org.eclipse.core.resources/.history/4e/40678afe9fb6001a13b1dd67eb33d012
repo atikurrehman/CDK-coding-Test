@@ -1,0 +1,12 @@
+INSERT INTO customer (id,name,customerType) VALUES(1,"test_primimum","PREMIMUM");
+INSERT INTO customer (id,name,customerType) VALUES(2,"test_regular","REGULAR");
+
+INSERT INTO DiscountSlabes (id,customerType,minValue,maxValue,discount) VALUES(1,"REGULAR",0,5000,0);
+INSERT INTO DiscountSlabes (id,customerType,minValue,maxValue,discount) VALUES(1,"REGULAR",5001,10000,10);
+INSERT INTO DiscountSlabes (id,customerType,minValue,maxValue,discount) VALUES(1,"REGULAR",10001,999999999999,20);
+
+INSERT INTO DiscountSlabes (id,customerType,minValue,maxValue,discount) VALUES(1,"PREMIMUM",0,4000,10);
+INSERT INTO DiscountSlabes (id,customerType,minValue,maxValue,discount) VALUES(1,"PREMIMUM",4001,8000,15);
+INSERT INTO DiscountSlabes (id,customerType,minValue,maxValue,discount) VALUES(1,"PREMIMUM",8001,12000,20);
+INSERT INTO DiscountSlabes (id,customerType,minValue,maxValue,discount) VALUES(1,"PREMIMUM",12001,999999999999,30);
+

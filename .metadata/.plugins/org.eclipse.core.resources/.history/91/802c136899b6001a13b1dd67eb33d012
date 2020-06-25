@@ -1,0 +1,5 @@
+package com.cdk.test.repository;
+
+public class CustomerRepository {
+
+}

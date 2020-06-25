@@ -1,0 +1,21 @@
+package com.cdk.test.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cdk.test.repository.DiscountslabesRepository;
+
+@Service
+public class RegularCustomerBillCalculater implements BillGenrator {
+	@Autowired
+	DiscountslabesRepository repo;
+
+	@Override
+	public double genrateBill(double billAmount) {
+		
+		repo.findAllDiscountSalebsByCustomerTypeANDBill(CustomerType.REGULAR,billAmount);
+
+		return 0;
+	}
+
+}

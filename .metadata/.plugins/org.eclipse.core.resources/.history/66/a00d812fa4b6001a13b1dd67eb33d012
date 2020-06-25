@@ -1,0 +1,17 @@
+package com.cdk.test.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.cdk.test.model.DiscountSlabes;
+
+@Repository
+public interface DiscountslabesRepository extends JpaRepository<DiscountSlabes, Integer> {
+	
+	@Query("SELECT * FROM DISCOUNT_SLABES  where customer_type=: and min_value<4432")
+	public List<DiscountSlabes> findAllDiscountSalebsByCustomerTypeANDBill(String customerType,double ammount);
+
+}

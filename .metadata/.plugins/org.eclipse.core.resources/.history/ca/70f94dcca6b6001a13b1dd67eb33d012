@@ -1,0 +1,11 @@
+package com.cdk.test.service;
+
+public class PremimumCustomerBillCalculater implements BillGenrator {
+
+	@Override
+	public double genrateBill(double billAmount) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.cdk.test.model;
+
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
+import com.cdk.test.service.CustomerType;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class Customer {
+	@Id
+	private Integer Id;
+	private String Name;
+	@Enumerated(EnumType.STRING)
+	private CustomerType customerType;
+
+}

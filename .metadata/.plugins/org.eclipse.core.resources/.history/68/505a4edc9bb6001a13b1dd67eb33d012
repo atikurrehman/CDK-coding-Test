@@ -1,0 +1,14 @@
+package com.cdk.test.model;
+
+import com.cdk.test.service.CustomerType;
+
+import lombok.Data;
+
+@Data
+public class Customer {
+
+	Integer Id;
+	String Name;
+	CustomerType customerType;
+
+}

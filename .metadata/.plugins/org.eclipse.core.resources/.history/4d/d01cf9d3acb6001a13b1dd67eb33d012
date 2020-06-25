@@ -1,0 +1,14 @@
+package com.cdk.test.controller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CustomerControllerTest {
+
+	@Test
+	void testGenrateCustomerBill() {
+		fail("Not yet implemented");
+	}
+
+}
